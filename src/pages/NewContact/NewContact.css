@@ -17,8 +17,8 @@ form{
 }
 
 
-.form-container p{
-    color: red;
+.new-contact-container p{
+    color: #cbe55d;
 }
 
 .form-container svg{
@@ -56,14 +56,14 @@ input::placeholder {
     margin-right: 8px; 
     text-transform: uppercase;
     color: #567767;
+
     
   }
   
   .fav input[type='checkbox'] {
-    /* Ваші бажані стилі для чекбоксу */
-    width: 20px; /* Задайте ширину чекбоксу за потребою */
-    height: 20px; /* Задайте висоту чекбоксу за потребою */
-    margin: 0; /* Знищити стандартні внутрішні відступи */
+    width: 20px; 
+    height: 20px; 
+    margin: 0; 
   }
   
 
@@ -95,6 +95,15 @@ select{
 .add-btn{
     width: 350px;
     margin-top: 20px;
+    padding: 5px;
+    background-color: #384e44;
+    border: none;
+    cursor: pointer;
+    transition: all .4s ease-in;
+}
+
+.add-btn:hover{
+  background-color: #567767;
 }
 
 

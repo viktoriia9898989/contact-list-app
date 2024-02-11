@@ -73,7 +73,7 @@ const NewContact = ({ onNewContact }) =>{
               <div>
                 <Field  type='number' name='avatar' id='avatar' min={0} max={99} placeholder='Enter number 0-99'/>
                 <FaImage/>
-                <ErrorMessage name='avatar'/>
+                <ErrorMessage name='avatar' component='p'/>
               </div>
               <div>
                 <Field as='select' name='gender'>
@@ -81,7 +81,7 @@ const NewContact = ({ onNewContact }) =>{
                   <option value='men'>Men</option>
                   <option value='women'>Women</option>
                 </Field>
-                <ErrorMessage name='avatar'/>
+                <ErrorMessage name='gender' component='p'/>
               </div>
               <div>
             
@@ -92,7 +92,7 @@ const NewContact = ({ onNewContact }) =>{
                   <option value='Private'>Private</option>
                   <option value='Friends'>Friends</option>
                 </Field>
-                <ErrorMessage name='avatar'/>
+                <ErrorMessage name='avatar' component='p'/>
               </div>
           
 
@@ -104,14 +104,7 @@ const NewContact = ({ onNewContact }) =>{
                 <ErrorMessage name='favorite'/>
               </div>
             
-              <button className='add-btn' type='submit' disabled={isSubmitting}>Add</button>
-
-     
-        
-  
-
-
-
+              <button className='add-btn' type='submit' disabled={isSubmitting}>Add New Contact</button>
             </Form>
 
             
