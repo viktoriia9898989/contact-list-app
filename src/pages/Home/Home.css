@@ -1,0 +1,37 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+.home-component span{
+    font-size: 30px;
+    text-transform: none;
+    
+}
+
+.home-component h2{
+    font-size: 30px;
+}
+
+.home-component .not-found-title{
+    padding: 8px;
+    border: 1px solid  #567767;
+    box-shadow: 0 0 15px #567767;
+
+}
+
+.home-component .welcome{
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.home-component .name-app{
+
+
+    font-size: 30px;
+    padding: 5px;
+    letter-spacing: 5px;
+
+    font-family: 'Parisienne', cursive;
+
+    box-shadow: 0 0 15px #567767;
+
+}

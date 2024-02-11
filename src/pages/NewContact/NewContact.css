@@ -1,0 +1,120 @@
+
+.new-contact-container{
+display: flex;
+justify-content: center;
+
+}
+
+form{
+    width: 430px;
+    padding: 25px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid #384e44;
+    
+}
+
+
+.form-container p{
+    color: red;
+}
+
+.form-container svg{
+    color: #384e44;
+}
+form svg{
+    color: #1d503a;
+    position: relative;
+    left: -20px;
+   
+    
+}
+input{
+   background-color: transparent;
+   border: transparent;
+   border-bottom: 2px solid #384e44 ;
+   padding: 10px;
+   margin-bottom: 10px;
+   outline: none;
+   color: #1d503a;
+   width: 350px;
+}
+
+input::placeholder {
+    color: #567767;
+}
+
+
+.fav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .fav label {
+    margin-right: 8px; 
+    text-transform: uppercase;
+    color: #567767;
+    
+  }
+  
+  .fav input[type='checkbox'] {
+    /* Ваші бажані стилі для чекбоксу */
+    width: 20px; /* Задайте ширину чекбоксу за потребою */
+    height: 20px; /* Задайте висоту чекбоксу за потребою */
+    margin: 0; /* Знищити стандартні внутрішні відступи */
+  }
+  
+
+
+
+input[type="number"] {
+  appearance: textfield; 
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+select{
+    width: 350px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 8px;
+    background-color: transparent;
+    border: 2px solid #1d503a;
+
+    color: #567767;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.add-btn{
+    width: 350px;
+    margin-top: 20px;
+}
+
+
+.border-right{
+    width: 120px;
+    height: 2px;
+    background-color: #384e44;
+    position: absolute;
+    top: -1px;
+     right: 0;
+}
+
+.border-left{
+    width: 85px;
+    height: 2px;
+    background-color: #384e44;
+    position: absolute;
+    top: -1px;
+     left: 0;
+}
+
+
+

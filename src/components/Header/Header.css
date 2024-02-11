@@ -1,0 +1,139 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  
+  li{
+    list-style-type: none;
+  }
+  
+  a{
+    color: black;
+  }
+
+
+  .top{
+    position: relative;
+  }
+
+
+
+  .top input{
+    position: absolute;
+    right: 200px;
+    top: 20px;
+    width: 200px;
+    font-size: 15px;
+  }
+  
+
+  
+  .container{
+    display: flex;
+  }
+  
+  main{
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .sidebar{
+    background: rgba(31, 41, 51, 0.6);;
+    height: 100vh;
+    color: white;
+    transition: all 0.5s ;
+    
+  }
+  
+  .top_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 15px;
+    border-bottom: 1px solid #3b4347;
+  
+  }
+  
+  
+  
+  .bars{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #567767;
+    font-size: 25px;
+    position: absolute;
+    left: 5px;
+    margin-bottom: 10px;
+  
+
+  }
+
+  .logo{
+    color: #567767;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+
+  
+    position: absolute;
+     right: 20px;
+     top: 5px;
+    
+  
+  
+    
+  
+  }
+
+ 
+
+  .logo svg{
+    font-size: 30px;
+    
+   
+  }
+
+
+
+ 
+  
+  .link{
+    display: flex;
+    gap: 15px;
+    color: white;
+    padding: 40px 15px;
+    transition: all 0.5s;
+  }
+  
+  .link:hover{
+    background:#3b4347;
+    color: aliceblue;
+    transition: all 0.5s;
+  }
+  .link:hover svg{
+    color: #567767;
+  }
+  
+  .active{
+    background: #3b4347;
+    color: aliceblue;
+  }
+  
+  .icon .link_text{
+    font-size: 20px;
+  }
+  
+  
