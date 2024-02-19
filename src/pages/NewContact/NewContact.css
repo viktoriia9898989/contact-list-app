@@ -2,6 +2,8 @@
 .new-contact-container{
 display: flex;
 justify-content: center;
+overflow-x: scroll;
+
 
 }
 
@@ -13,6 +15,8 @@ form{
     justify-content: center;
     flex-direction: column;
     border: 2px solid #384e44;
+
+
     
 }
 

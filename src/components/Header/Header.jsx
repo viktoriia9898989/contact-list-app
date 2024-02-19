@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect } from "react";
 import {
     FaAddressBook,
     FaBars,
@@ -9,11 +9,24 @@ import {
     
 } from "react-icons/fa";
 
+import { useDispatch } from "react-redux";
+import { searchContact } from "../../redux/actions";
+
 
 import { NavLink } from "react-router-dom";
 import './Header.css'
 
 const Header = ({ children }) => {
+     const [searchTherm,setSearchTherm] = useState()
+  const dispatch = useDispatch
+
+//   useEffect(() =>{
+//     dispatch(searchContact(searchTherm.toLowerCase()))
+//   }, [searchTherm])
+//     const handleChange = (e) =>{
+//         const value = e.target.value
+//         setSearchTherm(value)
+//     }
     const[isOpen, setIsOpen] = useState(false)
     const toggle = () => setIsOpen(!isOpen)
     const menuItem = [
@@ -47,7 +60,7 @@ const Header = ({ children }) => {
             <div className="top">
         
              <div  className="logo"> <h1><FaAddressBook/><div className="logo-name">ContactList</div></h1></div> 
-            <input type="text" placeholder="Search" />
+            <input type="text" placeholder="Search"/>
             
             
             
@@ -69,7 +82,7 @@ const Header = ({ children }) => {
                             to={item.path}
                             key={index}
                             className="link"
-                            activeClassName="active"
+                            activeсlassтame="active"
                         >
                             <div className="icon">{item.icon}</div>
                             <div  style={{display: isOpen ? "block" : "none"}}className="link_text">{item.name}</div>

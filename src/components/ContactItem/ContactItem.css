@@ -55,34 +55,41 @@
     top: 4px;
     gap: 20px;
     
+    
+  }
+
+  .card-contact-btns button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
   }
 
   .card-contact-btns svg{
     font-size: 20px;
+    color: #567767;
+    
   }
 
   
     
-  
 
-
-  /* Стилізація скролбара для WebKit */
 ::-webkit-scrollbar {
-    width: 12px; /* ширина скролбара */
+    width: 12px; 
   }
   
   ::-webkit-scrollbar-track {
-    background-color: transparent; /* колір фону треку (за областю скролінгу) */
+    background-color: transparent; 
     border-radius: 6px;
   }
   
   ::-webkit-scrollbar-thumb {
-    background-color: #567767; /* колір скролбара */
-    border-radius: 6px; /* закруглені кути скролбара */
+    background-color: #567767; 
+    border-radius: 6px; 
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background-color: #555; /* колір скролбара при наведенні */
+    background-color: #555; 
   }
   
 

@@ -1,52 +1,79 @@
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { addStatus } from '../../redux/actions';
 
+const Sidebar = () => {
+  const dispatch = useDispatch();
+  const contacts = useSelector(state => state.contacts);
 
+  const [newStatus, setNewStatus] = useState('');
 
-const Sidebar = ({ stor }) =>{
-
-    const statusCounts = {
-      Work: 0,
-      Family: 0,
-      Private: 0,
-      Friends: 0,
+  const handleAdd = () => {
+    if (newStatus.trim() !== '') {
+      dispatch(addStatus(newStatus));
+      setNewStatus(''); // Clear input after adding status
     }
-  
-    stor.forEach(contact => {
-      statusCounts[contact.status] += 1
-    })
+  };
+
+  const statusCounts = {
+    Work: 0,
+    Family: 0,
+    Private: 0,
+    Friends: 0,
+  };
+
+  contacts.forEach(contact => {
+    statusCounts[contact.status] += 1;
+  });
+
+  const totalContacts = contacts.length;
+
+  return (
+    <aside>
+      <div>
+        All Contacts<span>{totalContacts}</span>
+        <button onClick={handleAdd}>add</button>
+        <input
+          type="text"
+          value={newStatus}
+          onChange={e => setNewStatus(e.target.value)}
+          placeholder="Enter new status"
+        />
+      </div>
+      <hr />
+      <div className="list">
+
+      <div>
+                  <h5>Work</h5>
+                  <span>{statusCounts.Work}</span>
+               </div>
+
+              <div>
+                  <h5>Family</h5>
+              <span>{statusCounts.Family}</span>
+              </div>
+
+           <div>
+                  <h5>Friends</h5>
+               <span>{statusCounts.Friends}</span>
+           </div>
+
+           <div>
+                   <h5>Private</h5>
+                   <span>{statusCounts.Private}</span>
+             </div>
     
-    const totalContacts = stor.length
-  
-    return(
-      <aside className="container border-end">
-        <div className="row">
-          <div className="col-12">
-            <div>
-              <h4 className="m-4 fs-3 fw-bold">
-                All contacts<span className="ms-4">{totalContacts}</span>
-              </h4>
-            </div>
-            <div className="list">
-              <div className="m-3 d-flex justify-content-between">
-                <h5 className="bg-primary p-2">Work</h5>
-                <span>{statusCounts.Work}</span>
-              </div>
-              <div className="m-3 d-flex justify-content-between">
-                <h5 className="bg-success p-2">Family</h5>
-                <span>{statusCounts.Family}</span>
-              </div>
-              <div className="m-3 d-flex justify-content-between">
-                <h5 className="bg-danger p-2">Private</h5>
-                <span>{statusCounts.Private}</span>
-              </div>
-              <div className="m-3 d-flex justify-content-between">
-                <h5 className="bg-warning p-2">Friends</h5>
-                <span>{statusCounts.Friends}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </aside>
-    )
-  }
-  
-  export default Sidebar
+      </div>
+    </aside>
+  );
+};
+
+export default Sidebar;
+
+
+
+
+
+    // <div className="list">
+    //           
+    //       </div>

@@ -6,15 +6,26 @@ import { faHeart as regularHeart } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as solidHeart } from '@fortawesome/free-solid-svg-icons';
 import { FaTrash, FaUserEdit} from "react-icons/fa";
 import React from "react";
+import { useDispatch} from "react-redux";
+import { deleteContact } from "../../redux/actions";
 
-const ContactItem = ({ contact, onDeleteContact, onToggleFavorite }) => {
-    const deleteContact = (id) => {
-      onDeleteContact(id);
-    };
+const ContactItem = ({contact}) => {
+const dispatch = useDispatch()
+
+   const handleDeleteContact = (id) =>{
+   dispatch(deleteContact(id))
+   }
+
+  //  const handleChangeFavorite = (type) => {
+  //   if (type === false) {
+  //     return <FontAwesomeIcon icon={regularHeart} style={{ cursor: 'pointer' }} />;
+  //   } else if (type === true) { 
+  //     return <FontAwesomeIcon icon={solidHeart} style={{ color: 'red', cursor: 'pointer' }} />;
+  //   }
+  // };
   
-    const handleToggleFavorite = () => {
-      onToggleFavorite(contact.id); // Pass contact.id to onToggleFavorite
-    };
+  
+  
   
     return (
       <>
@@ -28,9 +39,9 @@ const ContactItem = ({ contact, onDeleteContact, onToggleFavorite }) => {
                 <p>Phone : {contact.phone}</p>
                 <p>Gender : {contact.gender}</p>
                 <p>Status : {contact.status}</p>
-                <p onClick={handleToggleFavorite}>
+                <p>
                   {contact.favorite ? (
-                    <FontAwesomeIcon icon={solidHeart} style={{ color: 'red', cursor: 'pointer' }} />
+                    <FontAwesomeIcon  icon={solidHeart} style={{ color: 'red', cursor: 'pointer' }} />
                   ) : (
                     <FontAwesomeIcon icon={regularHeart} style={{ cursor: 'pointer' }} />
                   )}
@@ -41,7 +52,7 @@ const ContactItem = ({ contact, onDeleteContact, onToggleFavorite }) => {
                       <FaUserEdit />
                     </button>
                   </Link>
-                  <button onClick={() => deleteContact(contact.id)}>
+                  <button onClick={() => handleDeleteContact(contact.id)}>
                     <FaTrash />
                   </button>
                 </div>
