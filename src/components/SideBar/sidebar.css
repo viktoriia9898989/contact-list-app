@@ -1,0 +1,108 @@
+.status{
+    display: flex;
+    gap: 15px;
+    justify-content: start;
+    align-items: center;
+}
+
+.status svg{
+    font-size: 25px;
+    cursor: pointer;
+    color: #125e28;
+}
+
+.list{
+    position: relative;
+    
+    
+}
+
+
+
+.statusName{
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #609600;
+    background-color: #125e28;
+    width: 150px;
+    padding: 5px;
+    height: 50px;
+    text-align: center;
+}
+
+.top-sidebar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+    padding-bottom: 20px;
+    background-color: #567767;
+    margin-bottom: 30px;
+}
+
+.top-sidebar h2{
+    color: #125e28;
+    
+}
+
+.top-sidebar span{
+    font-size: 40px;
+    color: #125e28;
+}
+
+.top-sidebar button{
+    background-color: #125e28;
+    height: 30px;
+    width: 150px;
+    color: #609600;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+
+
+}
+
+.new-status{
+    width: 200px;
+    font-size: 15px;
+    font-size: 15px;
+    width: 150px;
+}
+
+.status-amount{
+    font-size: 30px;
+    background: #609600;
+    padding: 10px 20px;
+    height: 50px;
+}
+
+.status-line{
+    display: flex;
+    justify-content: space-between;
+    
+    gap: 20px;
+
+    width: 600px;
+}
+
+.sidebar{
+    
+    height: 590px;
+    width: 600px;
+
+    margin-top: 20px;
+    margin-right: 40px;
+}
+
+.status-btn{
+    display: flex;
+    gap: 20px;
+    
+}
+

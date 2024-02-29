@@ -18,16 +18,16 @@ const ContactList = () => {
   : contacts;
 
   return (
-    <div className='test'>
+    <div className='wrapper'>
       <main className="cont">
         {filteredContacts.map((contact) => (
           <ContactItem key={contact.id} contact={contact} onDelete={handleDeleteContact} />
         ))}
       </main>
 
-      {/* <div className="sidebar2">
-        { <SideBar/> }
-      </div> */}
+      {<div className="sidebar">
+        {/* { <SideBar/> } */}
+      </div> }
     </div>
   );
 };

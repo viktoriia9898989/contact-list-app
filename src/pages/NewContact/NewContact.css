@@ -9,8 +9,8 @@ overflow-x: scroll;
 
 form{
     width: 430px;
-    padding: 25px;
-    margin-top: 60px;
+    padding: 20px;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -47,7 +47,7 @@ input{
 }
 
 input::placeholder {
-    color: #567767;
+    color: #1d503a;
 }
 
 

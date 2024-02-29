@@ -1,98 +1,118 @@
+.cont {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 890px;
+  height: 600px;
+  overflow-y: scroll;
+  padding-left: 40px;
+  margin-top: 20px;
+}
 
+.card-contact {
+  border: 1px solid#567767;
+  background-color: #567767;
+  text-align: center;
+  color: #125e28;
+  width: 380px;
+  padding: 5px;
+  position: relative;
+}
 
-.cont{
+.status-contact{
+  position: absolute;
+  top: 90px;
+  right: 40px;
+  background-color: #125e28;
+  padding: 5px;
+  width: 80px;
+  border-radius: 20px;
+  color: #cbe55d;
+}
 
-    display: flex;
-    flex-wrap: wrap;
+ p{
+  color: #125e28;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-right: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
 
-    gap: 30px;
-    width: 890px;
-    height: 600px;
-    overflow-y: scroll;
+}
 
-
-  }
+p svg{
+  font-size: 15px;
   
-  .card-contact{
-      border: 1px solid#567767;
-      color: white;
-      width: 380px;
-      padding: 5px;
-      position: relative;
-      
-      
-  }
+}
 
-  .wrapper{
-    display: flex;
-  }
 
-  .card-contact p{
-    color: #567767;
-    margin-top: 10px;
-    margin-bottom: 5px;
-  }
 
-  .card-contact h3{
-    text-align: center;
-  }
+.wrapper {
+  display: flex;
+}
 
-  .card-contact img{
-    border-radius: 50%;
-  }
 
-  .avatar{
 
-    width: 130px;
-    margin: 0px auto;
-  }
+.card-contact h3 {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
-  .card-contact-btns{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 4;
-    top: 4px;
-    gap: 20px;
-    
-    
-  }
+.card-contact img {
+  border-radius: 50%;
+}
 
-  .card-contact-btns button{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+.avatar {
 
-  }
+  width: 130px;
+  margin: 0px auto;
+}
 
-  .card-contact-btns svg{
-    font-size: 20px;
-    color: #567767;
-    
-  }
+.card-contact-btns {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 4;
+  top: 4px;
+  gap: 20px;
 
-  
-    
+
+}
+
+.card-contact-btns button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+}
+
+.card-contact-btns svg {
+  font-size: 20px;
+  color: #125e28;
+
+}
+
+
+
 
 ::-webkit-scrollbar {
-    width: 12px; 
-  }
-  
-  ::-webkit-scrollbar-track {
-    background-color: transparent; 
-    border-radius: 6px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: #567767; 
-    border-radius: 6px; 
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: #555; 
-  }
-  
+  width: 12px;
+}
 
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 6px;
+}
 
-  
-  
+::-webkit-scrollbar-thumb {
+  background-color: #567767;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}

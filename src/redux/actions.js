@@ -1,4 +1,6 @@
-import { ADD_CONTACT, DELETE_CONTACT , UPDATE_CONTACT ,SEARCH_CONTACT, ADD_STATUS, CHANGE_FAVORITE} from "./type";
+import { ADD_CONTACT, DELETE_CONTACT , UPDATE_CONTACT ,SEARCH_CONTACT, ADD_STATUS,TOGGLE_FAVORITE , UPDATE_STATUS ,DELETE_STATUS, SET_SELECTED_STATUS} from "./type";
+
+import { v4   as uuidv4 } from 'uuid';
 
 export const addContact = (newContact) => {
     return {
@@ -28,19 +30,32 @@ export const searchContact = (searchTherm) => {
     }
 }
 
-export const addStatus = (newStatus) => {
-    return {
-        type: ADD_STATUS,
-        payload: newStatus
-    }
-}
 
-export const changeFavorite = (contactID) => {
-    return {
-        type: CHANGE_FAVORITE,
-        payload: contactID
-    }
-}
+
+export const addStatus = (status) => ({
+    type: ADD_STATUS,
+    payload: status,
+  });
+  
+  export const updateStatus = (status) => ({
+    type: UPDATE_STATUS,
+    payload: status,
+  });
+
+  export const deleteStatus = (statusId) => ({
+    type: DELETE_STATUS,
+    payload: statusId,
+  });
+
+export const toggleFavoriteStatus = (id) => ({
+    type: TOGGLE_FAVORITE,
+    payload: id,
+  });
+
+  export const setSelectedStatus = (status) => ({
+    type: SET_SELECTED_STATUS,
+    payload: status,
+  });
 
 
 

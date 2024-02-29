@@ -44,7 +44,7 @@ const UpdateContact = () => {
 
   const handleUpdateContact = (updatedContact) => {
     dispatch(updateContact(updatedContact));
-    navigation('/contact-list');
+    navigation('/');
   };
 
   return (

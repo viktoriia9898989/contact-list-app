@@ -5,11 +5,12 @@ import {FaCheck, FaEnvelope, FaImage, FaPhone, FaUser, } from "react-icons/fa";
 
 import * as Yup from 'yup'
 import {Formik, Form, Field, ErrorMessage} from 'formik'
+import { v4 as uuidv4 } from 'uuid';
 
 import { useDispatch } from 'react-redux';
 import { addContact } from '../../redux/actions';
 
-import { v4   as uuidv4 } from 'uuid';
+
 import { useNavigate } from 'react-router-dom';
 
 const NewContact = () =>{
@@ -41,7 +42,7 @@ const NewContact = () =>{
     dispatch(addContact(values))
 
   
-    navigation('/contact-list')
+    navigation('/')
   }
 
   return(
