@@ -26,7 +26,7 @@ const ContactList = () => {
       </main>
 
       {<div className="sidebar">
-        {/* { <SideBar/> } */}
+         { <SideBar/> } 
       </div> }
     </div>
   );

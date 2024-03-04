@@ -18,9 +18,10 @@ const ContactItem = ({ contact , selectedStatus }) => {
     dispatch(deleteContact(id));
   };
 
-  if (selectedStatus && selectedStatus.name  && contact.status !== selectedStatus.name) {
+  if (selectedStatus && selectedStatus.name !== 'All' && contact.status !== selectedStatus.name) {
     return null; 
   }
+
 
 
 
