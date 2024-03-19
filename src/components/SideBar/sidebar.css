@@ -1,25 +1,29 @@
-.status{
+.status {
     display: flex;
     gap: 15px;
     justify-content: start;
     align-items: center;
 }
 
-.status svg{
+.status svg {
     font-size: 25px;
     cursor: pointer;
     color: #125e28;
 }
 
-.list{
+.list {
     position: relative;
-    
-    
+}
+
+aside{
+
+    height: 80vh;
+    width: 620px;
 }
 
 
 
-h5{
+.list button {
     font-size: 30px;
     margin-bottom: 15px;
     color: #609600;
@@ -28,9 +32,11 @@ h5{
     padding: 5px;
     height: 50px;
     text-align: center;
+
 }
 
-.top-sidebar{
+
+.top-sidebar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,17 +47,17 @@ h5{
     margin-bottom: 30px;
 }
 
-.top-sidebar h2{
+.top-sidebar h2 {
     color: #125e28;
-    
+
 }
 
-.top-sidebar span{
+.top-sidebar span {
     font-size: 40px;
     color: #125e28;
 }
 
-.top-sidebar button{
+.top-sidebar button {
     background-color: #125e28;
     height: 30px;
     width: 150px;
@@ -68,31 +74,31 @@ h5{
 
 }
 
-.new-status{
+.new-status {
     width: 200px;
     font-size: 15px;
     font-size: 15px;
     width: 150px;
 }
 
-.status-amount{
+.status-amount {
     font-size: 30px;
     background: #609600;
     padding: 10px 20px;
     height: 50px;
 }
 
-.status-line{
+.status-line {
     display: flex;
     justify-content: space-between;
-    
+
     gap: 20px;
 
     width: 600px;
 }
 
-.sidebar{
-    
+.sidebar {
+
     height: 590px;
     width: 600px;
 
@@ -100,9 +106,8 @@ h5{
     margin-right: 40px;
 }
 
-.status-btn{
+.status-btn {
     display: flex;
     gap: 20px;
-    
-}
 
+}

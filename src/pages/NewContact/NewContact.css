@@ -9,15 +9,13 @@ overflow-x: scroll;
 
 form{
     width: 430px;
+    height: auto;
     padding: 20px;
     margin-top: 30px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    border: 2px solid #384e44;
-
-
-    
+    border: 2px solid #384e44;  
 }
 
 

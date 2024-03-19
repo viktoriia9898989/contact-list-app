@@ -1,5 +1,5 @@
 
-import { ADD_CONTACT, DELETE_CONTACT, UPDATE_CONTACT, SEARCH_CONTACT, ADD_STATUS, TOGGLE_FAVORITE , UPDATE_STATUS ,DELETE_STATUS ,SET_SELECTED_STATUS } from "./type";
+import { ADD_CONTACT, DELETE_CONTACT, UPDATE_CONTACT, SEARCH_CONTACT, ADD_STATUS, TOGGLE_FAVORITE , UPDATE_STATUS ,DELETE_STATUS ,SET_SELECTED_STATUS,FILTER_CONTACTS_BY_STATUS } from "./type";
 import { v4 as uuidv4 } from 'uuid';
 const initialState = {
 
@@ -70,6 +70,8 @@ const initialState = {
   ],
 
   selectedStatus: null,
+
+  filteredContacts: [],
 
 
 
@@ -145,6 +147,15 @@ case DELETE_STATUS:
     ...state,
     selectedStatus: action.payload,
   };
+
+  case FILTER_CONTACTS_BY_STATUS:
+    const selectedStatus = action.payload;
+    const filteredContacts = state.contacts.filter(contact => contact.status === selectedStatus);
+    return {
+      ...state,
+      selectedStatus,
+      filteredContacts,
+    };
 
 
 

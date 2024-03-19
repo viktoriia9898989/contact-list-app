@@ -81,6 +81,7 @@ const NewContact = () =>{
                   <option value=''>Choose gender</option>
                   <option value='men'>Men</option>
                   <option value='women'>Women</option>
+
                 </Field>
                 <ErrorMessage name='gender' component='p'/>
               </div>

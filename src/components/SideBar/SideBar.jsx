@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addStatus, updateStatus, deleteStatus } from '../../redux/actions';
 import { v4 as uuidv4 } from 'uuid';
-import { setSelectedStatus } from '../../redux/actions';
+import { setSelectedStatus,filterContactsByStatus  } from '../../redux/actions';
 import { FaEdit, FaTrash } from "react-icons/fa";
 import './sidebar.css';
 
@@ -13,7 +13,7 @@ const Sidebar = () => {
   const [newStatus, setNewStatus] = useState('');
   const [editingStatus, setEditingStatus] = useState(null);
   const selectedStatus = useSelector((state) => state.selectedStatus);
-  const [filteredContacts, setFilteredContacts] = useState(contacts);
+
   const [statusCounts, setStatusCounts] = useState({
     Work: 0,
     Family: 0,
@@ -37,32 +37,41 @@ const Sidebar = () => {
 
     setStatusCounts(updatedStatusCounts);
   }, [contacts]);
-
   const handleAddStatus = () => {
     if (newStatus.trim() !== '') {
       if (editingStatus) {
+        if (editingStatus.name !== newStatus) {
+          setStatusCounts(prevCounts => {
+            const updatedCounts = { ...prevCounts };
+            const oldStatusCount = updatedCounts[editingStatus.name];
+            delete updatedCounts[editingStatus.name];
+            updatedCounts[newStatus] = oldStatusCount;
+            return updatedCounts;
+          });
+        }
         dispatch(updateStatus({ ...editingStatus, name: newStatus }));
       } else {
         const newStatusId = uuidv4();
         dispatch(addStatus({ id: newStatusId, name: newStatus }));
-        setStatusCounts((prevCounts) => ({
+        setStatusCounts(prevCounts => ({
           ...prevCounts,
           [newStatus]: 0,
         }));
-        contacts.forEach((contact) => {
+        contacts.forEach(contact => {
           if (contact.status === newStatus) {
-            setStatusCounts((prevCounts) => ({
+            setStatusCounts(prevCounts => ({
               ...prevCounts,
               [newStatus]: prevCounts[newStatus] + 1,
             }));
           }
         });
       }
-
+  
       setNewStatus('');
       setEditingStatus(null);
     }
   };
+  
 
 
   const handleEditStatus = (status) => {
@@ -77,11 +86,10 @@ const Sidebar = () => {
 
   const handleStatusClick = (status) => {
     dispatch(setSelectedStatus(status.name === selectedStatus?.name ? null : status));
-    console.log(status);
+
+
+    dispatch(filterContactsByStatus(status.name));
   };
-
-
-
   const totalContacts = contacts.length;
 
   return (
@@ -103,9 +111,9 @@ const Sidebar = () => {
           <div key={status.id} onClick={() => handleStatusClick(status)}>
             <div className="status">
               <div className="status-line">
-                <h5 className={status.name === selectedStatus ? 'selected' : ''}>
+                <button className={status.name === selectedStatus ? 'selected' : ''}>
                   {status.name}
-                </h5>
+                </button>
                 <span className='status-amount'>{statusCounts[status.name]}</span>
                 <div className="status-btn">
                   <FaEdit onClick={() => handleEditStatus(status)} />

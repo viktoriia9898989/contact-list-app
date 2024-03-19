@@ -4,10 +4,13 @@
 
 
 #root{
-    background: #453456;
+
     font-family: 'Montserrat', sans-serif;
     color: black;
+    
     height: 100vh;
     overflow: hidden;
-    background: rgba(23, 23, 24, 0.871); /* Прозорий темний колір фону */
-}
+    background: rgba(23, 23, 24, 0.871);
+    
+}  
+
